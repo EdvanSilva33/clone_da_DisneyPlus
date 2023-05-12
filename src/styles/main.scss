@@ -1,6 +1,8 @@
 @use 'variaveis';
 @use 'hero';
 @use 'shows';
+@use 'plans';
+@use 'watch';
 
 
 
@@ -58,6 +60,22 @@ body{
         @include text(18px);
         color: variaveis.$corTextSecondary;
         text-decoration: underline;
+    }
+    button{
+        width: 100%;
+        height: 60px;
+        display: block;
+        font-size: 18px;
+        color: variaveis.$corTextSecondary;
+        background-color: variaveis.$corBotao ;
+        border-radius: 4px;
+        margin-top: 2vw;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover{
+            background-color: variaveis.$corLightBlue;
+        }
     }
 
 }
