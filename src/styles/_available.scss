@@ -1,0 +1,26 @@
+.available-devices{
+    h2{
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    padding: 5.6vw;
+    &__list{
+        display:grid;
+        gap: 24px;
+        grid-template-columns: repeat(4, 1fr);
+        &__item{
+            h4{
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+            li{
+                list-style: none;
+            }
+            text-align: center;
+            img{
+                
+                max-width: 100%;
+            }
+        }
+    }
+}

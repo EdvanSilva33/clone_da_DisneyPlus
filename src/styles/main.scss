@@ -2,7 +2,8 @@
 @use 'hero';
 @use 'shows';
 @use 'plans';
-@use 'watch';
+@use 'available';
+@use 'faq';
 
 
 
@@ -48,10 +49,10 @@ body{
         @include text(12px);
     }
     .title--big{
-        @include text(44px);
+        @include text(46px);
     }
     .title{
-        @include text;
+        @include text(40px);
     }
     .title--small{
         @include text(28px);
@@ -80,3 +81,37 @@ body{
 
 }
 
+.image-text-section{
+    padding: 5.6vw;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    img{
+        max-width: 100%;
+    }
+ &__text__container{
+        padding: 0 2vw;
+        h2{
+            margin-bottom: 24px;
+        }
+    }
+    &--image-full-width{
+        display: block;
+        position: relative;
+        img{
+            width: 100%;
+        }
+        &__text__container{
+            align-items: flex-start;
+            position: absolute;
+            top:0;
+            left: 48%;
+            height: 100%;
+            width: calc(55% - 5.6vw);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           
+        }
+    }
+}

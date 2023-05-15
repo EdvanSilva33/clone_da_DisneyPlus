@@ -13,7 +13,7 @@
             display: grid;
         }
         &__item{
-
+            list-style: none;
             img{
                 max-width: 100%;
                 border-radius: 4px;
@@ -35,6 +35,10 @@
             border-bottom: 5px solid transparent;
             &--is-active{
                 border-color:  variaveis.$corTextSecondary ;
+               
+            }
+            &:hover{
+                background-color: transparent;
             }
         }
     }
