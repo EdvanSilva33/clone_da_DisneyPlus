@@ -33,7 +33,7 @@
                 height: 0;
                 overflow: hidden;
                 padding: 0 24px;
-                transition: height, 0.5s ease;
+                transition: height, .5s all;
 
             }
             &--is-open{
@@ -44,8 +44,13 @@
                 .faq__questions__item__answer{
                     height: auto;          
                    padding-bottom: 24px;
-                   transition: height, 0.5s ease;
-                   
+                   transition: height, .5s all ease;
+                  p{
+                    padding-left: 18px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    font-size: 18px;
+                  } 
     
                 }
                

@@ -2,6 +2,19 @@ document.addEventListener("DOMContentLoaded", function(){
     const buttons = document.querySelectorAll('[data-tab-button]');
     const questions = document.querySelectorAll('[data-faq-question]');//aqui e para pegar os elemento para fazer o acoordeon
 
+    const heroSection = document.querySelector('.hero');
+    const alturaHero = heroSection.clientHeight;// esta funcão pega a altura do elemento hero (clientHeight)
+   
+    window.addEventListener('scroll', function(){
+        const posicaoAtual = window.scrollY;
+
+        if(posicaoAtual < alturaHero){
+            hidderHeader();
+        }else{
+            showHeader();
+        }
+    })
+//seção de atraçoes, programação das abas
     for (let i = 0; i < buttons.length; i++) {
 
                 buttons[i].addEventListener('click', function(btn) {
@@ -15,10 +28,20 @@ document.addEventListener("DOMContentLoaded", function(){
                 })
             
     }
+    //seção FAQ, o accordion da pagina
     for(let i = 0; i < questions.length; i++) {
         questions[i].addEventListener('click', abreOuFechaResposta);
     }
 })
+function hidderHeader() {
+    const header = document.querySelector('header');
+    header.classList.add('header--is-hidden');
+}
+function showHeader(){
+    const header = document.querySelector('header');
+    header.classList.remove('header--is-hidden');
+}
+
 function abreOuFechaResposta(e){
     const classe ='faq__questions__item--is-open';
 
